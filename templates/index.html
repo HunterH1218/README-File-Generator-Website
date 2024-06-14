@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate README</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate README</h1>
+        <form method="POST" action="/">
+            <label for="prompt">Enter your prompt:</label><br><br>
+            <input type="text" id="prompt" name="prompt" value="{{ prompt }}" required><br><br>
+            <input type="submit" value="Generate">
+        </form>
+        <h2>Output:</h2>
+        <pre>{{ response }}</pre>
+    </div>
+</body>
+</html>
